@@ -4,10 +4,10 @@ import '../../../../shared/domain/nothing.dart';
 import '../entities/contact.dart';
 import '../repositories/contact_repository.dart';
 
-class CreateContact {
+class UpdateContact {
   final ContactRepository _contactRepository;
 
-  CreateContact(this._contactRepository);
+  UpdateContact(this._contactRepository);
 
   Future<Either<String, Nothing>> call(Contact contact) async {
     try {

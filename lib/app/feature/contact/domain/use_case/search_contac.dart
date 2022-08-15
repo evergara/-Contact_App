@@ -3,10 +3,10 @@ import 'package:dartz/dartz.dart';
 import '../entities/contact.dart';
 import '../repositories/contact_repository.dart';
 
-class SearchAllContact {
+class SearchContact {
   final ContactRepository _contactRepository;
 
-  SearchAllContact(this._contactRepository);
+  SearchContact(this._contactRepository);
 
   Future<Either<String, Contact>> call(String uuid) async {
     try {

@@ -1,4 +1,4 @@
-import 'contact_phone.dart';
+import 'package:contact_app/app/feature/contact/domain/objects_value/phone.dart';
 
 class Contact {
   final String _uuid;
@@ -6,10 +6,15 @@ class Contact {
   String? _email;
   String? _address;
   String? _picture;
-  List<ContactPhone>? _contactphones;
+  List<Phone>? _phones;
 
-  Contact(this._name, this._uuid, this._address, this._email, this._picture,
-      this._contactphones);
+  Contact(this._name, this._uuid,
+      {String? address, String? email, String? picture, List<Phone>? phones}) {
+    _address = address;
+    _email = email;
+    _picture = picture;
+    _phones = phones;
+  }
 
   String get uuid => _uuid;
   String get name => _name;
@@ -23,6 +28,6 @@ class Contact {
   String? get picture => _picture;
   set picture(picture) => _picture = picture;
 
-  List<ContactPhone>? get contactphones => _contactphones;
-  set contactphones(contactphones) => _contactphones = contactphones;
+  List<Phone>? get contactphones => _phones;
+  set contactphones(phones) => _phones = _phones;
 }
